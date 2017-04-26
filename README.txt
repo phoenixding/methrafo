@@ -1,10 +1,10 @@
 
   __  __      _   _     _____        __      
- |  \/  |    | | | |   |  __ \      / _|     
- | \  / | ___| |_| |__ | |__) |__ _| |_ ___  
- | |\/| |/ _ \ __| '_ \|  _  // _` |  _/ _ \ 
- | |  | |  __/ |_| | | | | \ \ (_| | || (_) |
- |_|  |_|\___|\__|_| |_|_|  \_\__,_|_| \___/ 
+|  \/  |    | | | |   |  __ \      / _|     
+| \  / | ___| |_| |__ | |__) |__ _| |_ ___  
+| |\/| |/ _ \ __| '_ \|  _  // _` |  _/ _ \ 
+| |  | |  __/ |_| | | | | \ \ (_| | || (_) |
+|_|  |_|\___|\__|_| |_|_|  \_\__,_|_| \___/ 
                                              
                                              		 
 			 
@@ -30,7 +30,6 @@ Python packages dependencies:
 -- scikit-learn 
 -- scipy
 -- numpy
--- pyBigWig
 
 The python setup.py script will try to install these packages automatically.
 However, please install them manually if, by any reason, the automatic 
@@ -90,6 +89,9 @@ $sudo pip install methrafo
 
 USAGE/EXAMPLES
 ========================================================================
+Please check the example dataset provided in the example folder at: 
+http://www.cs.cmu.edu/~jund/methrafo/example/
+
 The following 4 commands were provided by the methrafo package:
 methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 
@@ -138,20 +140,20 @@ HOW TO USE
    it to bigWig format. Please refer methrafo.bamScript command above for
    converion instruction. 
    
-   You might need use methrafo.download the download corresponding reference 
-   genome. But you may also allow to download the reference genome yourself.
+   You might need to use methrafo.download the download corresponding reference 
+   genome. But you are also allowed to download the reference genome yourself.
    The reference genome folder needs to contain the following files:
    all chromsome sequences in fasta format; chromosome size file containing
    the length information of the chromosome. 
    
 2) We provided a trained model on human (Based on breast luminal cells dataset 
-   from roadmap database). You tested on a few other datasets on human and it shows
+   from roadmap database). We tested it  on a few other datasets on human and it shows
    pretty good performance in terms of running time and correlation with Bisulfite-Seq data.
    You can use the trained model we provided or you can use the methrafo.train script we provide
-   to build your own model by specifying MeDIP-Seq input and Bisulfite-Seq output. 
+   to build your own model by specifying MeDIP-Seq input (in bigWig format) and Bisulfite-Seq output (in bigWig format)
    Please refer methrafo.train command for complete details. 
    
-3) With the provided trained model (or your own trained model), we are using methrafo.predict to 
+3) With the provided trained model (or your own trained model), we provided the command methrafo.predict to 
    predict the genome wide methylation level. The output file is a Wiggle (.wig) format file. You can visualize
    it using IGV or UCSC genome browser. You can also get the methylation level for any given genomic location
    easily from the generated wig file. 
