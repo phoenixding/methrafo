@@ -7,7 +7,7 @@
 |_|  |_|\___|\__|_| |_|_|  \_\__,_|_| \___/ 
 ```                                             
                                        		 
-	
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)	
 			 
 # INTRODUCTION
 
@@ -176,19 +176,19 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
   
 # CREDITS
 
-This software was developed by ZIV-system biology group @ Carnegie Mellon University
+This software was developed by ZIV-system biology group @ Carnegie Mellon University  
 Implemented by Jun Ding
 
 
 # LICENSE 
 
-This software is under MIT license.
+This software is under MIT license.  
 see the LICENSE.txt file for details. 
 
 
 # CONTACT
 
-zivbj at cs.cmu.edu
+zivbj at cs.cmu.edu  
 jund  at andrew.cmu.edu
 
 
