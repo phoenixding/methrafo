@@ -10,7 +10,6 @@ before_install:
 - pip install pyBigWig
 - sudo apt-get install samtools
 - sudo apt-get install bedtools
-
 script:
 - python setup.py test
 notifications:
