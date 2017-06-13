@@ -34,7 +34,7 @@ def main():
 	for f in filenames:
 		if f!="." and f!="..":
 			ftp.retrbinary("RETR "+f, open(outputdir+'/'+f,"wb").write)
-			print f+" downloaded"
+			print(f+" downloaded")
 	
 	ftp.close()
 	
