@@ -107,7 +107,7 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	```
 	$methrafo.download <reference_genome_id> <output_directory>
 	```
-	e.g.
+	example:  
 	```
 	$methrafo.download hg19 hg19
 	```
@@ -148,6 +148,7 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	chr21	48129895
 	```
 	
+	example:  
 	```
 	$methrafo.bamScript example/example_raw.bam hg19/hg19.chrom.sizes
 	```
@@ -161,13 +162,16 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	<MeDIPS.bigWig> : The bigWig file representing the RPKM on each position of the genome.    
 	<Bisulfite.bigWig>: The bigWig file representing the Bisulfite-Seq methylation level (ground truth).     
 	Note: if your input is .bam file, please use methrafo.bamScript to convert it to bigWig format first.  
-	e.g.
+	
+	example:  
 	```
 	$methrafo.train hg19 example/example_medip.bw example/example_bisulfite.bw trained_model
 	```
 
 * *4) methrafo.predict*  
 	This command is used to predict the methylation level based on MeDIP-Seq data.
+	
+	example:  
 	```
 	$methrafo.predict hg19 example/example_medips.bw trained_model.pkl example_out
 	```
