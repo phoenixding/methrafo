@@ -99,10 +99,10 @@ Please check the example dataset provided in the example folder at:
 http://www.cs.cmu.edu/~jund/methrafo/example/   
 
 The following 4 commands were provided by the methrafo package:   
-methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict   
+methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict     
 
 * *1) methrafo.download*   
-	This command is used to download the genome files. 
+	This command is used to download the genome files.  
 	Files: chromosome sequences(e.g. chr1.fa.gz), chromosome sizes(e.g. hg19.chrom.sizes)
 	```
 	$methrafo.download <reference_genome_id> <output_directory>
@@ -119,8 +119,35 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	$methrafo.bamScript <bam_file> <genome size file>
 	```
 	bam_file => bam file  
-	genome size file => chromosome sizes .e.g. hg19.chrom.sizes (This file can be found in the downloaded reference genome folder e.g. hg19_out)  
-	e.g.    
+	genome size file => chromosome sizes .e.g. hg19.chrom.sizes.
+	
+	```
+	chr1	249250621
+	chr2	243199373
+	chr3	198022430
+	chr4	191154276
+	chr5	180915260
+	chr6	171115067
+	chr7	159138663
+	chrX	155270560
+	chr8	146364022
+	chr9	141213431
+	chr10	135534747
+	chr11	135006516
+	chr12	133851895
+	chr13	115169878
+	chr14	107349540
+	chr15	102531392
+	chr16	90354753
+	chr17	81195210
+	chr18	78077248
+	chr20	63025520
+	chrY	59373566
+	chr19	59128983
+	chr22	51304566
+	chr21	48129895
+	```
+	
 	```
 	$methrafo.bamScript example/example_raw.bam hg19/hg19.chrom.sizes
 	```
