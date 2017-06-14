@@ -58,7 +58,7 @@ level based on raw bam files).
 	$sudo yum install bedtools
 	```
 	If you can't install samtools,bedtools using the commands above, please refer to 
-	the manual pages for installation instructions. 
+	the manual pages for installation instructions.   
 	samtools: http://samtools.sourceforge.net/   
 	bedtoos: http://bedtools.readthedocs.io/en/latest/   
 
