@@ -75,7 +75,7 @@ level based on raw bam files).
 	```
 	$export PATH=$PATH:~/path_to_bedGraphToWigBig_Folder
 	```
-	If you need it permanently, add the above command in your ~/.bashrc.  
+	If you need it permanently, add the above command to your ~/.bashrc.  
 
 	Please refer to the following page for how to set $PATH on linux.  
 	http://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux
