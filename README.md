@@ -70,7 +70,7 @@ level based on raw bam files).
 	For Mac os,
 	http://hgdownload.cse.ucsc.edu/admin/exe/macOSX.x86_64/
 
-	Second, add the script to os path. 
+	Second, add the script to os path.   
 	Open a terminal, then type
 	```
 	$export PATH=$PATH:~/path_to_bedGraphToWigBig_Folder
