@@ -84,6 +84,7 @@ level based on raw bam files).
 
 First, download the software package.  
 Second, cd to the package directory.  
+Third, run setup.py script to install.  
 Linux, Mac:  
 ```
 $ sudo python setup.py install 
