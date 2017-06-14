@@ -6,7 +6,7 @@
 | |  | |  __/ |_| | | | | \ \ (_| | || (_) |
 |_|  |_|\___|\__|_| |_|_|  \_\__,_|_| \___/ 
 ```                                             
-                                       		 
+[![Build Status](https://travis-ci.org/phoenixding/methrafo.svg?branch=master)](https://travis-ci.org/phoenixding/methrafo)                                     		 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)	
 			 
 # INTRODUCTION
