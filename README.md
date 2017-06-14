@@ -24,7 +24,7 @@ Linux, MacOS
 python 2.7.x
 
 It was installed by default for most Linux distributions and MAC.  
-If not, please refer https://www.python.org/downloads/ for installation 
+If not, please refer to https://www.python.org/downloads/ for installation 
 instructions. 
 
 Python packages dependencies:  
@@ -57,7 +57,7 @@ level based on raw bam files).
 	$sudo yum install samtools
 	$sudo yum install bedtools
 	```
-	If you can't install samtools,bedtools using the commands above, please refer 
+	If you can't install samtools,bedtools using the commands above, please refer to 
 	the manual pages for installation instructions. 
 	samtools: http://samtools.sourceforge.net/   
 	bedtoos: http://bedtools.readthedocs.io/en/latest/   
@@ -152,7 +152,7 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
    .bw   => bigWig file from MeDIP-Seq (representing the RPKM value).   
    
    If the input is in .bam format, you need to use methrafo to convert 
-   it to bigWig format. Please refer methrafo.bamScript command above for
+   it to bigWig format. Please refer to methrafo.bamScript command above for
    instruction. 
    
    You might need to use methrafo.download to download corresponding reference 
@@ -165,7 +165,7 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
    from roadmap database). We tested it on a few other datasets on human and it shows
    pretty good performance in terms of running time and correlation with Bisulfite-Seq data.
    You can use the trained model we provided or you can use the methrafo.train script
-   to build your own model. Please refer methrafo.train command for complete details. 
+   to build your own model. Please refer to methrafo.train command for complete details. 
    
 * (3) With the provided trained model (or your own trained model), we provided the command methrafo.predict to 
    predict the genome wide methylation level. The output file is a Wiggle (.wig) format file. You can visualize
