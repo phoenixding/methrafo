@@ -37,7 +37,7 @@ The python setup.py script will try to install these packages automatically.
 However, please install them manually if, by any reason, the automatic 
 installation fails. 
 
-external packages dependencies:
+External packages dependencies:
 The software requires the following external packages to process bam files.
 (The following packages must be installed if you want to calculate methylation
 level based on raw bam files).
