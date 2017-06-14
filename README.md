@@ -23,7 +23,7 @@ Linux, MacOS
 
 python 2.7.x
 
-It was installed by default for most Linux distributicons and MAC
+It was installed by default for most Linux distributions and MAC.  
 If not, please refer https://www.python.org/downloads/ for installation 
 instructions. 
 
@@ -40,7 +40,7 @@ installation fails.
 external packages dependencies:
 The software requires the following external packages to process bam files.
 (The following packages must be installed if you want to calculate methylation
-level based on raw bam files) 
+level based on raw bam files).
 
 --samtools  
 --bedtools  
@@ -57,13 +57,13 @@ level based on raw bam files)
 	$sudo yum install samtools
 	$sudo yum install bedtools
 	```
-	If you can't install samtools,bedtools using the command above, please refer 
-	the manual page for installation instructions. 
+	If you can't install samtools,bedtools using the commands above, please refer 
+	the manual pages for installation instructions. 
 	samtools: http://samtools.sourceforge.net/   
 	bedtoos: http://bedtools.readthedocs.io/en/latest/   
 
 * (2) bedGraphToWigBig  
-	First download the excutable from UCSC web-site.
+	First download the excutable file from UCSC web-site.
 
 	For Linux, 
 	http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/  
@@ -75,9 +75,9 @@ level based on raw bam files)
 	```
 	$export PATH=$PATH:~/path_to_bedGraphToWigBig_Folder
 	```
-	If you need it permanently, add the above command in your ~/.bashrc
+	If you need it permanently, add the above command in your ~/.bashrc.  
 
-	Please refer the following page for help about how to set $PATH on linux
+	Please refer to the following page for how to set $PATH on linux.  
 	http://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux
 
 # INSTALLATION
@@ -102,7 +102,7 @@ The following 4 commands were provided by the methrafo package:
 methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict   
 
 * *1) methrafo.download*   
-	This command was used to download the genome files 
+	This command is used to download the genome files. 
 	Files: chromosome sequences(e.g. chr1.fa.gz), chromosome sizes(e.g. hg19.chrom.sizes)
 	```
 	$methrafo.download <reference_genome_id> <output_directory>
@@ -114,7 +114,7 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	reference_genome_id represents the ID of the genome (e.g. hg19,mm10, et al.)
 
 * *2) methrafo.bamScript*     
-	This command was used to convert bam file to bigWig file (RPKM)   
+	This command is used to convert bam file to bigWig file (RPKM).  
 	```
 	$methrafo.bamScript <bam_file> <genome size file>
 	```
@@ -126,7 +126,7 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	```
 
 *  *3) methrafo.train*  
-	This command was used to train the model
+	This command is used to train the random forest model.
 	```
 	$methrafo.train <downloaded_reference_genome_folder> <MeDIPS.bigWig> <Bisulfite.bigWig> <output_prefix>   
 	```
@@ -145,32 +145,31 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict
 	$methrafo.predict hg19 example/example_medips.bw trained_model.pkl example_out
 	```
 
-## Command descriptions:
+## Command description:
 
-* (1) methRafo accept the following formats as the input:  
-   .bam  => mapped reads from MeDIP-Seq result  
-   .bw   => bigWig file from MeDIP-Seq (representing the RPKM value)  
+* (1) methRafo accepts the following formats as the input:  
+   .bam  => mapped reads from MeDIP-Seq result.   
+   .bw   => bigWig file from MeDIP-Seq (representing the RPKM value).   
    
    If the input is in .bam format, you need to use methrafo to convert 
    it to bigWig format. Please refer methrafo.bamScript command above for
-   conversion instruction. 
+   instruction. 
    
-   You might need to use methrafo.download the download corresponding reference 
+   You might need to use methrafo.download to download corresponding reference 
    genome. But you are also allowed to download the reference genome yourself.
    The reference genome folder needs to contain the following files:
    all chromosome sequences in fasta format; chromosome size file containing
-   the length information of the chromosome. 
+   the length information of each chromosome. 
    
-* (2) We provided a trained model on human (Based on breast luminal cells dataset 
-   from roadmap database). We tested it  on a few other datasets on human and it shows
+* (2) We provided a trained model on human (based on a breast luminal cells dataset 
+   from roadmap database). We tested it on a few other datasets on human and it shows
    pretty good performance in terms of running time and correlation with Bisulfite-Seq data.
-   You can use the trained model we provided or you can use the methrafo.train script we provide
-   to build your own model by specifying MeDIP-Seq input (in bigWig format) and Bisulfite-Seq output (in bigWig format)
-   Please refer methrafo.train command for complete details. 
+   You can use the trained model we provided or you can use the methrafo.train script
+   to build your own model. Please refer methrafo.train command for complete details. 
    
 * (3) With the provided trained model (or your own trained model), we provided the command methrafo.predict to 
    predict the genome wide methylation level. The output file is a Wiggle (.wig) format file. You can visualize
-   it using IGV or UCSC genome browser. You can also get the methylation level for any given genomic location
+   it using IGV or UCSC genome browser. You can also get the methylation level for any given genomic region
    easily from the generated wig file. 
    
   
