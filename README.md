@@ -102,7 +102,7 @@ Please check the example dataset provided in the example folder at:
 http://www.cs.cmu.edu/~jund/methrafo/example/   
 
 The following 4 commands were provided by the methrafo package:   
-methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict     
+methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict.     
 
 * *1) methrafo.download*   
 	This command is used to download the genome files.  
