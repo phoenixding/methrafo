@@ -60,7 +60,7 @@ level based on raw bam files).
 	If you can't install samtools,bedtools using the commands above, please refer to 
 	the manual pages for installation instructions.   
 	samtools: http://samtools.sourceforge.net/   
-	bedtoos: http://bedtools.readthedocs.io/en/latest/   
+	bedtools: http://bedtools.readthedocs.io/en/latest/   
 
 * (2) bedGraphToWigBig  
 	First download the excutable file from UCSC web-site.
