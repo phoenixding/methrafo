@@ -55,7 +55,7 @@ However, please install them manually if the automatic installation fails.
 $./pre_install
 ```
 
-Manual dependency installation (**skp this section if the automatic dependency installation succeeded**):  
+Manual dependency installation (**skip this section if the automatic dependency installation succeeded**):  
 
 
 * (1) samtools, bedtools  
