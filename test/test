@@ -1,6 +1,6 @@
 #!/bin/bash
 # download reference genome (if the server is not responding, please download them manually)
-#methrafo.download hg19 hg19
+methrafo.download hg19 hg19
 
 #predict based on provided MeDIP-Seq bam 
 methrafo.bamScript example_medip.bam hg19/hg19.chrom.sizes
