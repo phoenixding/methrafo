@@ -46,6 +46,16 @@ level based on raw bam files).
 --bedtools  
 --bedGraphToBigWig  
 
+We provided a "pre_install" shell script to install those dependencies automatically. 
+However, please install them manually if the automatic installation fails.
+
+```
+$./pre_install
+```
+
+Manual dependency installation (**skp this section if the automatic dependency installation succeeded**):  
+
+
 * (1) samtools, bedtools  
 	For debian/ubuntu based linux, you can install samtools,bedtools directly by:
 	```
@@ -206,6 +216,8 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict.
    it using IGV or UCSC genome browser. You can also get the methylation level for any given genomic region
    easily from the generated wig file. 
    
+# TEST EXAMPLE
+ 
   
 # CREDITS
 
