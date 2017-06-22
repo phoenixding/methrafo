@@ -12,8 +12,10 @@
 # INTRODUCTION
 
 
-This software is designed to estimate genome-wide absolute methylation 
+This python package is designed to estimate genome-wide absolute methylation 
 level based on the MeDIP-Seq data. 
+
+For R users, please refer to https://github.com/phoenixding/rmethrafo for R wrapped package. 
 
 # SUPPORTED PLATFORMS
 
