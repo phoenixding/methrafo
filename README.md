@@ -218,7 +218,20 @@ methrafo.bamScript, methrafo.download, methrafo.train, methrafo.predict.
    easily from the generated wig file. 
    
 # TEST EXAMPLE
- 
+We provided a test example inside the "test" folder. "test" is the bash script to perform the test on the example dataset.
+
+```
+# download reference genome (if the server is not responding, please download them manually)
+methrafo.download hg19 hg19
+
+#predict based on provided MeDIP-Seq bam 
+methrafo.bamScript example_medip.bam hg19/hg19.chrom.sizes
+methrafo.predict hg19 example_medip.bam.sort.bam.bedGraph.sort.bw ../model/rr.pkl e1_out
+
+# predict based on provided MeDIP-Seq bigwig 
+methrafo.predict hg19 example_medip.bw ../model/rr.pkl e2_out
+
+```
   
 # CREDITS
 
