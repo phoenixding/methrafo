@@ -8,8 +8,9 @@ before_install:
 - pip install scipy
 - pip install scikit-learn
 - pip install pyBigWig
-- sudo apt-get install samtools
+- sudo apt-get update
 - sudo apt-get install bedtools
+- sudo apt-get install samtools
 
 script:
 - python setup.py test
