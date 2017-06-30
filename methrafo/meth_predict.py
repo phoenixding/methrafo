@@ -64,14 +64,13 @@ def nearbyCGVector(cgv,nearbycut):
 		nearcgs.append(len(inearcgs))
 	return nearcgs
 			
-def Vector2Wig(chri,cgv,rv):
+def Vector2Wig(chri,cgv,rv,f):
 	wigString="variableStep chrom="+chri+" span=2"
-	wigS=[]
+	f.write(wigString+'\n')
 	for i in range(len(cgv)):
-		wigS.append(str(cgv[i])+' '+str(rv[i]))
-	wigS='\n'.join(wigS)
-	wigString=wigString+'\n'+wigS
-	return wigString
+		f.write(str(cgv[i])+' '+str(rv[i])+'\n')
+	
+	
 	
 def getFeature(iid,gref,nearbycut,bwFile):
 	chromi=fetchGenome(iid,gref)
@@ -124,9 +123,7 @@ def main():
 				gc.collect()
 				rv=list(rfregressor.predict(FI))
 				#rv=[rv[k] if sv[k]>0 else 0 for k in range(len(rv))]
-				wig_rv=Vector2Wig(iid,cgv,rv)
-				f.write(wig_rv+'\n')
-				
+				Vector2Wig(iid,cgv,rv,f)	
 			except:
 				pass 
 	f.close()
