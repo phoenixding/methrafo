@@ -122,8 +122,8 @@ def main():
 	f.write(wig_track+'\n')
 	for i in chroms:
 		if i[0:3]=='chr':
-			print(iid)
 			iid=i.split('.')[0]
+			print(iid)
 			try:
 				chromi=fetchGenome(iid,gref)
 				cgv=cgVector(chromi)
