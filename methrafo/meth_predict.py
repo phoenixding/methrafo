@@ -127,13 +127,17 @@ def main():
 				chromi=fetchGenome(iid,gref)
 				cgv=cgVector(chromi)
 				sv=scoreVector(chromi,cgv,bwFile)
+				if (sum(sv)==0):
+					continue
 				nearcgs=nearbyCGVector(cgv,nearbycut)   # number of cgs nearby
+				
 				FI=[]
 				for j in range(len(cgv)):
 					fij=[sv[j],len(nearcgs[j])]
 					FI.append(fij)
-					
 				rv=list(rfregressor.predict(FI))
+				rv=[rv[k] if sv[k]>0 else 0 for k in range(len(rv))]
+				
 				wig_rv=Vector2Wig(iid,cgv,rv)
 				f.write(wig_rv+'\n')
 				print(iid)

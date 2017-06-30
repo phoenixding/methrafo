@@ -126,7 +126,6 @@ def main():
 				chromi=fetchGenome(iid,gref)
 				cgv=cgVector(chromi)
 				sv=scoreVector(chromi,cgv,bwFile)
-				#pdb.set_trace()
 				nearcgs=nearbyCGVector(cgv,nearbycut)   # number of cgs nearby
 				tsv=scoreVector(chromi,cgv,bwBSFile)
 				FI=[]
