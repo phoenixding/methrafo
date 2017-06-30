@@ -122,6 +122,7 @@ def main():
 	f.write(wig_track+'\n')
 	for i in chroms:
 		if i[0:3]=='chr':
+			print(iid)
 			iid=i.split('.')[0]
 			try:
 				chromi=fetchGenome(iid,gref)
@@ -136,11 +137,10 @@ def main():
 					fij=[sv[j],len(nearcgs[j])]
 					FI.append(fij)
 				rv=list(rfregressor.predict(FI))
-				rv=[rv[k] if sv[k]>0 else 0 for k in range(len(rv))]
-				
+				#rv=[rv[k] if sv[k]>0 else 0 for k in range(len(rv))]
 				wig_rv=Vector2Wig(iid,cgv,rv)
 				f.write(wig_rv+'\n')
-				print(iid)
+				
 			except:
 				pass 
 	f.close()
