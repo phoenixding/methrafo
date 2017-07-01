@@ -16,6 +16,7 @@ from sklearn.ensemble import RandomForestRegressor
 import math
 import cPickle as pickle
 import gc
+import numpy as np
 
 #-----------------------------------------------------------------------
 def fetchGenome(chrom_id,gref):
@@ -32,12 +33,24 @@ def cgVector(chrom):
 	cgV=[m.start() for m in re.finditer('CG',chrom_seq)]
 	return cgV
 	
-
-def scoreVector(chrom,cgv,bwFile):
+""""
+def scoreVector1(chrom,cgv,bwFile):
 	bw=pyBigWig.open(bwFile)
 	chrom_name=chrom[0]
 	sc=bw.values(chrom_name,0,len(chrom[1]))
 	sv=[0 if math.isnan(sc[item]) else sc[item]  for item in cgv ]
+	return sv
+"""	
+
+def scoreVector(chrom,cgv,bwFile):
+	bw=pyBigWig.open(bwFile)
+	chrom_name=chrom[0]
+	N=10 # split large list to reduce RAM usage
+	cgvL=np.array_split(cgv,N)
+	sv=[]
+	for l in cgvL:
+		sc=bw.values(chrom_name,l[0],l[-1]+1)
+		sv+=[0 if math.isnan(sc[item-l[0]]) else sc[item-l[0]]  for item in l]
 	return sv
 	
 def nearbyCGVector(cgv,nearbycut):
@@ -120,7 +133,6 @@ def main():
 			print(iid)
 			try:
 				[cgv,FI]=getFeature(iid,gref,nearbycut,bwFile)
-				gc.collect()
 				rv=list(rfregressor.predict(FI))
 				#rv=[rv[k] if sv[k]>0 else 0 for k in range(len(rv))]
 				Vector2Wig(iid,cgv,rv,f)	
